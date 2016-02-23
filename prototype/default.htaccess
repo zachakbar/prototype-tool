@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /prototype/
+
+#if file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+#if directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-d
+#redirect all to index.php
+RewriteRule (.*)$ /prototype/index.php [L]
