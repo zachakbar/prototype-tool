@@ -6,8 +6,6 @@ ini_set('display_errors', '1');
 // include the config file
 include 'config.php';
 
-//global $PROTOTYPE_PATH, $SITE_URL, $URL_PATH, $INCLUDE_PATH, $INCLUDE_PATH_PROTOTYPE, $START_PAGE, $IMG_PATH, $PROTOTYPE_PAGES;
-
 // include the incfile script
 include $INCLUDE_PATH.'/urlrewrite.php';
 
