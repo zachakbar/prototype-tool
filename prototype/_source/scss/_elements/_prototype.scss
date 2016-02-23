@@ -1,0 +1,232 @@
+/************************************************************************/
+/* PROTOTYPE SPECIFIC STYLES
+/************************************************************************/
+
+/************************************************************************/
+/* MODULES
+/************************************************************************/
+.img{ margin-bottom: 2em; }
+
+.img_full{
+	
+	&.height_sm img{ max-height: 30rem; }
+	
+	&.height_med img{ max-height: 60rem; }
+	
+	img{ width: 100%; }
+}
+
+section, aside, article{
+  
+	&.lightgrey{
+    	background-color: $lightgrey;
+	}
+  
+	&.grey{
+    	background-color: $grey;
+	}
+  
+	&.darkgrey{
+    	background-color: $darkgrey;
+    
+		#{headings()}, p,a{ color: $white; }
+	}
+}
+
+/************************************************************************/
+/* BLOCKS
+/************************************************************************/
+#launch_imgmodal{ cursor: pointer; }
+
+// Images with captions
+.imgcaption{
+	position: relative;
+  
+	// Image with Caption Left
+	&#imgcaptionleft{
+		.caption{
+			@include breakpoint($tablet){
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-height: 72rem;
+				height: 100%;
+				padding: 4rem;
+			}
+		}
+	}
+  
+	// Image with Caption on the Bottom
+	&#imgcaptionbottom{
+		.caption{
+			@include breakpoint($tablet){
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding: 4rem;
+			}
+		}
+	}
+  
+  // Image with Caption Below
+	&#imgcaptionbelow{
+    	.caption{
+			@include breakpoint($tablet){
+				padding: 4rem;
+			}
+		}
+	}
+  
+	.caption{
+		background: rgba($darkgrey,0.5);
+		padding: 2rem;
+	}
+}
+
+.lightgrey {
+	background: $lightgrey;
+	padding: 1rem;
+	
+	p {
+		margin: 0;
+		text-align: center;
+	}
+}
+
+.launch_btn{
+	display: none;
+	
+	@include breakpoint($desktop){
+		display: block;
+		background: $lightgrey;
+		border: 1px solid $grey;
+		position: fixed;
+		
+		@include border-radius(3px);
+		
+		&:hover{
+			background: rgba($lightgrey,0.5);
+		}
+		
+		a{
+			padding: 1rem 1.5rem;
+			color: $textcolor;
+			display: inline-block;
+		}
+	}
+	
+	&#prototype_btn{
+		bottom: 1rem;
+		left: 1rem;
+	}
+	
+	&.layouts_btn{
+		bottom: 6rem;
+		left: 1rem;
+	}
+}
+
+#layouts_modal{
+	ul li{
+		font-size: 1.6rem;
+		line-height: 1.4;
+		text-align: center;
+	}
+}
+
+#newsletter_signup{
+	
+	fieldset{
+		position: relative;
+		
+		@include breakpoint($tablet){
+			
+			input[type="email"]{
+				padding-right: 8rem;
+			}
+			
+			input[type="submit"]{
+				padding: 1.2rem 2rem;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+}
+
+#page_patterns {
+  
+	.section_head{
+	    background: $lightgrey;
+	    padding: 1.6rem;
+	    
+	    h1{ margin-bottom: 0.5rem; }
+	}
+  
+	section div.wrap {
+    
+	    article {
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+			
+			.title {
+				border-bottom: 1px solid $lightgrey;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+			}
+			
+			#grids, .blog_results {
+				.row { margin-bottom: 2rem; }
+			}
+		}
+	}
+}
+
+/************************************************************************/
+/* SOCIAL	
+/************************************************************************/
+#social {
+	@include clearfix;
+	list-style-type: none;
+	padding: 0;
+	
+	li {
+		float: left;
+		font-size: 2.5rem;
+		margin-right: 0.5rem;
+	
+		a { color: $black; }
+	}
+}
+
+
+/************************************************************************/
+/* PAGINATION
+/************************************************************************/
+#pagination {
+	@include clearfix;
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		float: left;
+		border: 1px solid $lightgrey;
+		border-right: 0;
+		
+		&:last-child {
+			border-right: 1px solid $lightgrey;
+		}
+		
+		a {
+			display: block;
+			padding: 0.5rem 1rem;
+			color: $black;
+			
+			&.active { background: $lightgrey; }
+			
+			&:hover, &:active { background: $grey; }
+		}
+	}
+}

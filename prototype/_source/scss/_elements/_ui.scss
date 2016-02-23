@@ -1,0 +1,193 @@
+// UI Elements
+
+// Accordion Styles
+#accordion{
+	
+	.ui-state-default{
+		background: $lightgrey;
+		padding: 1rem;
+		margin-bottom: 0.5rem;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	.ui-state-active{
+		background: $darkgrey;
+		color: $white;
+	}
+	
+	.ui-accordion-content{
+		padding: 1rem 1rem 0;
+	}
+}
+
+// Tabs Styles
+#tabs{
+  
+	ul{
+	    margin-bottom: 0.5rem;
+	    padding: 0;
+	        
+		li{
+			display: inline-block;
+			outline: none;
+			margin-bottom: 0;
+			
+			&.ui-state-default{
+				background: $lightgrey;
+				color: $textcolor;
+				cursor: pointer;
+					
+				a{
+					color: $textcolor;
+					padding: 1rem;
+					display: block;
+				}
+			}
+			
+			&.ui-state-active{
+				background: $darkgrey;
+			
+				a{ color: $white; }
+			}
+		}
+	}
+  
+	.ui-tabs-panel{ padding: 1rem 1em 0; }
+}
+
+// Datepicker Styles
+#ui-datepicker-div{
+	@extend p;
+	background: $white;
+	border: 1px solid $grey;
+	width: 22rem;
+	padding: 0.25rem;
+	display: none;
+	
+	// Datepicker Header Styles
+	.ui-datepicker-header{
+	    background: $lightgrey;
+	    border: 1px solid $grey;
+	    padding: 0.5rem 0;
+	    font-weight: bold;
+	    
+	    a{ display: block; }
+	    
+	    .ui-datepicker-prev{
+			position: relative;
+			
+			span{
+				display: block;
+				position: absolute;
+				left: 0.2rem;
+				top: 0.2rem;
+			}
+	    }
+    
+		.ui-datepicker-next{
+			position: relative;
+		
+			span{
+				display: block;
+				position: absolute;
+				right: 0.2rem;
+				top: 0.2rem;
+			}
+		}
+    
+		.ui-icon{
+			width: 1.6rem;
+			height: 1.6rem;
+			text-indent: -99999px;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			cursor: pointer;
+		}
+    
+	    .ui-icon-circle-triangle-w{ background-image: url("../img/ui/ui-icon-datepicker-arrow-w.png"); }
+	    
+	    .ui-icon-circle-triangle-e{ background-image: url("../img/ui/ui-icon-datepicker-arrow-e.png"); }
+    
+		.ui-datepicker-title{
+			margin: 0 2.3rem;
+			text-align: center;
+		}
+	}
+  
+	// Datepicker Calendar Styles
+	table{
+	    width: 100%;
+	    border-collapse: collapse;
+	    font-size: 1.2rem;
+		
+		th{
+			font-weight: bold;
+			text-align: center;
+			
+			&.ui-datepicker-week-end{
+				padding: 0.2rem 0.1rem;
+				border: 0;
+			}
+		}
+    
+		td{
+			background: none;
+			border: 0;
+			padding: 0.1rem;
+			
+			&.ui-state-disabled{
+				background: none;
+				border: 0;
+			}
+      
+			&.ui-datepicker-today a{
+				background: rgba($lightgrey,0.5);
+				border-color: rgba($black,0.8);
+				font-weight: bold;
+			}
+			
+			.ui-state-default{
+				background: $lightgrey;
+				border: 1px solid $grey;
+				color: $textcolor;
+				font-size: 1.4rem;
+				text-align: right;
+				padding: 0.5rem;
+				display: block;
+				cursor: pointer;
+			}
+			
+			.ui-state-hover{ background: rgba($lightgrey,0.5); }
+			
+			.ui-state-active{
+				background: $grey;
+				border: 1px solid $darkgrey;
+				color: $white;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+// Modal Styles
+.modal{
+	display: none;
+	
+	.modal_wrap{
+		background: $white;
+		padding: 4rem;
+		max-width: 60rem;
+		margin: 1rem;
+		position: relative;
+	
+		.close{
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			margin: 0;
+			cursor: pointer;
+		}
+	}
+}
+

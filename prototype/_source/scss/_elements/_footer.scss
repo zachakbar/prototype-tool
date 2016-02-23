@@ -1,0 +1,43 @@
+/************************************************************************/
+/* FOOTER STYLES
+/************************************************************************/
+
+footer[role="contentinfo"] {
+	@include clearfix;
+	padding: 2rem 0;
+	background: $black;
+	color: $grey;
+  
+	.copyright{
+		text-align: center;
+	
+		@include breakpoint($tablet){
+			text-align: left;
+			display: inline-block;
+			float: left;
+		}
+	}
+  
+	nav[role="navigation"]{
+	
+		@include breakpoint($tablet){
+			float: right;
+		}
+		
+		ul{
+			margin: 0 0 1rem 0;
+			padding: 0;
+			
+			li{
+				text-align: center;
+				list-style-type: none;
+				
+				@include breakpoint($tablet){
+					text-align: right;
+				}
+				
+				a{ color: $grey; }
+			}
+		}
+	}
+}
